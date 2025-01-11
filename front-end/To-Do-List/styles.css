@@ -1,0 +1,182 @@
+/* CSS Reset Rules - Alligator.io - https://www.digitalocean.com/community/tutorials/css-minimal-css-reset */
+html {
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Root rules */
+:root {
+    --lato: "Lato", sans-serif;
+    --poppins: "Poppins", sans-serif;
+    --bold: 700;
+    --medium: 500;
+    --regular: 400;
+    --light: 300;
+    --XL: 2rem;
+    --L: 1.5rem;
+    --M: 1rem;
+    --S: 0.875rem;
+    --XS: 0.75rem;
+    --font-style: normal;
+
+    --color-yellow: #c89b1e;
+    --color-green: #1ca049;
+    --color-blue: #0077cc;
+    --color-red: #e63946;
+    --color-white: #F2F2F2;
+    --color-grey: #dcdcdc;
+    --color-black: #333333;
+};
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-family: var(--lato);
+    font-weight: var(--bold);
+    font-style: var(--font-style);
+    font-size: var(--XL);
+    color: var(--color-yellow);
+    margin: 0;
+}
+
+header span {
+    font-family: var(--poppins);
+    font-weight: var(--light);
+    font-size: var(--M);
+    font-style: var(--font-style);
+    color: var(--color-blue);
+    margin-top: 0.5rem;
+}
+
+/* Main */
+main {
+    flex: 1;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.main-content h2 {
+    font-family: var(--lato);
+    font-size: var(--L);
+    font-weight: var(--medium);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.list-input-container {
+    height: 3rem;
+    padding: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-input-label {
+    font-family: var(--poppins);
+    font-size: var(--M);
+    font-weight: var(--regular);
+    margin-right: 0.75rem;
+}
+
+.list-input-box {
+    height: 1.95rem;
+    width: 12.05rem;
+    border: 1px solid var(--color-black);
+    border-radius: 1rem 0 0 1rem;
+    border-right: none;
+    padding: 0 0.8rem;
+    font-family: var(--poppins);
+    font-size: var(--XS);
+}
+
+.list-input-box:focus {
+    outline: none;
+    border-color: var(--color-green);
+}
+
+.list-input-container button {
+    height: 1.95rem;
+    width: 1.95rem;
+    background-color: var(--color-green);
+    border: 1px solid var(--color-black);
+    border-left: none;
+    border-radius: 0 1rem 1rem 0;
+    cursor: pointer;
+}
+
+.list-input-box:focus ~ .list-button {
+    border-color: var(--color-green);
+}
+
+.list-input-container button:hover {
+    opacity: 0.8;
+    border: 1px solid var(--color-green);
+}
+
+.list-input-container button:active {
+    opacity: 0.5;
+    border: 1px solid var(--color-green);
+}
+
+.list-input-container button img {
+    height: 100%;
+    width: 100%;
+    padding-right: 0.1rem;
+}
+
+
+/* Footer */
+footer {
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
